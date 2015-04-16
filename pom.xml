@@ -19,7 +19,7 @@
     <distributionManagement>
         <repository>
             <id>ssh-repository</id>
-            <url>scpexe://sabaleuski.com/maven2</url>
+            <url>scpexe://root@sabaleuski.com/maven2</url>
         </repository>
     </distributionManagement>
 
