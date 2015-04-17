@@ -18,3 +18,22 @@ To run test you should add to .pom - file following code:
   <version>1.2</version>
 </dependency>
 ```
+
+In your code:
+```java
+import com.sabaleuski.TestRunner;
+
+...
+
+public class Runner {
+
+    public static void main(String [] args) throws XMLParseException {
+        TestRunner.parseCmd(args);
+        List<Class> listeners = new ArrayList<>();
+        listeners.add(HTMLReporter.class);
+        listeners.add(TestListener.class);
+        TestRunner.runTests(ProjectConstants.TESTNG_FILE, listeners);
+    }
+}
+
+```
